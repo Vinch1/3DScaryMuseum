@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum of 18th Century Art — A 1700s Timeline</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="hud">
+    <div id="crosshair"></div>
+    <div id="prompt"></div>
+    <div id="scare-overlay"></div>
+  </div>
+
+  <div id="intro" class="overlay">
+    <div class="panel">
+      <h1>Museum of 18th Century Art</h1>
+      <p class="subtitle">A timeline of the 1700s — Rococo to Neoclassicism to Romanticism's dawn</p>
+      <p>Explore the gallery. Walk up to a painting and press <b>E</b> (or click) to read about it.</p>
+      <div class="controls">
+        <div><b>WASD</b> / Arrows — Move</div>
+        <div><b>Mouse</b> — Look around</div>
+        <div><b>Shift</b> — Run</div>
+        <div><b>E</b> / Click — Inspect painting</div>
+        <div><b>Esc</b> — Release pointer</div>
+      </div>
+      <button id="start-btn">Enter the Museum</button>
+    </div>
+  </div>
+
+  <div id="info" class="overlay hidden">
+    <div class="panel">
+      <span id="info-year" class="year"></span>
+      <h2 id="info-title"></h2>
+      <p id="info-artist" class="artist"></p>
+      <p id="info-movement" class="movement"></p>
+      <p id="info-desc" class="desc"></p>
+      <button id="close-info">Continue exploring</button>
+    </div>
+  </div>
+
+  <div id="timeline-bar">
+    <div class="tl-track"></div>
+    <div id="tl-progress" class="tl-progress"></div>
+    <div class="tl-markers"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
